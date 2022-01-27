@@ -1,8 +1,12 @@
 .header {
+  font-family: var(--display-font);
+}
+
+.headerContent {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-family: var(--display-font);
 }
 
 .branding {
@@ -77,7 +81,7 @@
 }
 
 .overlay {
-  background: #0F1108dd; /* Hex + Alpha, --color-core-darkest */
+  background: #35372Edd; /* Hex + Alpha, --color-core-darkest */
   position: fixed;
   left: 0;
   top: 0;
@@ -94,7 +98,39 @@
 }
 
 .headerNav a {
+  display: inline-block;
   padding: 0 var(--space-sm);
+  background: var(--color-core-darker);
+}
+
+.headerNav li {
+  margin-top: 4px;
+}
+
+.headerNav a,
+.headerSocial a {
+  font-size: 1.25em;
+}
+
+.headerNav a:focus,
+.headerSocial a:focus {
+  color: var(--color-accent-lightest);
+}
+
+.headerSocial {
+  margin-left: var(--space-xs);
+}
+
+.headerSocial li {
+  width: 56px;
+  height: 56px;
+}
+
+.headerHeading {
+  padding-top: var(--space-sm);
+  margin-bottom: var(--space-xs);
+  margin-left: var(--space-sm);
+  color: var(--color-core-lighter);
 }
 
 .main {

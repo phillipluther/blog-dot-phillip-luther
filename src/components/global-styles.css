@@ -89,6 +89,10 @@ a:focus {
   color: var(--color-accent-dark);
 }
 
+a:focus {
+  outline-offset: -2px;
+}
+
 * {
   box-sizing: border-box;
 }

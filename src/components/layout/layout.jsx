@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import VisuallyHidden from '@reach/visually-hidden';
 import { DialogOverlay, DialogContent } from "@reach/dialog";
 import PrimaryNav from '../primary-nav';
+import Heading from '../heading';
 import Social from '../social';
 import Container from '../container';
 import Logo from '../../images/blog-phillip-luther-logo.inline.svg';
@@ -35,40 +36,57 @@ const Layout = ({
   return (
     <>
       <header id="header" className={styles.header}>
-        <button
-          type="button"
-          className={styles.toggle}
-          onClick={() => showMenu(true)}
-        >
-          <VisuallyHidden>
-            {isMenuShowing ? 'Hide' : 'Show'}
-            {' '}
-            Navigation Menu
-          </VisuallyHidden>
-          <span className={burgerClasses} aria-hidden />
-        </button>
+        <Container className={styles.headerContent} large>
+          <button
+            type="button"
+            className={styles.toggle}
+            onClick={() => showMenu(true)}
+          >
+            <VisuallyHidden>
+              {isMenuShowing ? 'Hide' : 'Show'}
+              {' '}
+              Navigation Menu
+            </VisuallyHidden>
+            <span className={burgerClasses} aria-hidden />
+          </button>
 
-        <TitleTag className={styles.branding}>
-          <Link to="/" className={styles.logoLink}>
-            <Logo className={styles.logo} aria-hidden="true" alt="" />
-            <VisuallyHidden>{metadata.name}</VisuallyHidden>
-          </Link>
-        </TitleTag>
+          <TitleTag className={styles.branding}>
+            <Link to="/" className={styles.logoLink}>
+              <Logo className={styles.logo} aria-hidden="true" alt="" />
+              <VisuallyHidden>{metadata.name}</VisuallyHidden>
+            </Link>
+          </TitleTag>
+        </Container>
+      </header>
 
-        <DialogOverlay
-          isOpen={isMenuShowing}
-          onDismiss={() => showMenu(false)}
-          className={styles.overlay}
-        >
+      <DialogOverlay
+        isOpen={isMenuShowing}
+        onDismiss={() => showMenu(false)}
+        className={styles.overlay}
+      >
+        <Container large>
           <DialogContent className={styles.modal}>
+            <VisuallyHidden as="h2">Primary Navigation</VisuallyHidden>
+
             <button className={styles.toggle} onClick={() => showMenu(false)}>
               <VisuallyHidden>Close</VisuallyHidden>
               <span className={burgerClasses} aria-hidden />
             </button>
+
             <PrimaryNav className={styles.headerNav} />
+
+            <Heading
+              as="h3"
+              size="xs"
+              bold={false}
+              className={styles.headerHeading}
+            >
+              On Social Media
+            </Heading>
+            <Social className={styles.headerSocial} />
           </DialogContent>
-        </DialogOverlay>
-      </header>
+        </Container>
+      </DialogOverlay>
 
       <Container as="main" className={styles.main} large>
         {children}
