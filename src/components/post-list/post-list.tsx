@@ -39,7 +39,7 @@ const PostList = ({
         <li className={styles.item} key={id}>
           <article>
             <header className={styles.header}>
-              <Heading as={headingLevel} className={styles.title}>
+              <Heading as={headingLevel} size="md" className={styles.title}>
                 <Link to={postUrl} className={styles.titleLink}>{frontmatter.title}</Link>
               </Heading>
               <Date dateString={frontmatter.date} className={styles.date} />
@@ -50,7 +50,7 @@ const PostList = ({
                     tabIndex={-1}
                     image={getImage(frontmatter.cover)}
                     alt=""
-                    aria-hidden="true"
+                    aria-hidden
                     className={styles.cover}
                   />
                 </Link>
