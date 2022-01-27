@@ -1,0 +1,26 @@
+.base {
+  font-family: var(--display-font);
+  letter-spacing: -1px;
+}
+
+.base:not(.bold) {
+  font-weight: 700;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.base,
+.base a {
+  color: inherit;
+}
+
+.base a {
+  text-decoration: none;
+}
+
+.base a:hover {
+  text-decoration: underline;
+  color: var(--color-accent-dark);
+}

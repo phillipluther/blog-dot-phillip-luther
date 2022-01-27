@@ -1,0 +1,24 @@
+.container {
+  margin: auto;
+  max-width: 800px;
+}
+
+.large {
+  max-width: 960px;
+}
+
+.top {
+  padding-top: var(--space-sm);
+}
+
+.right {
+  padding-right: var(--space-sm);
+}
+
+.bottom {
+  padding-bottom: var(--space-sm);
+}
+
+.left {
+  padding-left: var(--space-sm);
+}
