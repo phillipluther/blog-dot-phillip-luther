@@ -24,6 +24,8 @@ const BlogPost = ({ data }) => {
 
   const image = getImage(cover);
 
+  console.log('IMAGE', image);
+
   return (
     <Layout>
       <Seo

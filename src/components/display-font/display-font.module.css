@@ -11,16 +11,6 @@
   font-weight: 900;
 }
 
-.base,
-.base a {
+.base {
   color: inherit;
-}
-
-.base a {
-  text-decoration: none;
-}
-
-.base a:hover {
-  text-decoration: underline;
-  color: var(--color-accent-dark);
 }

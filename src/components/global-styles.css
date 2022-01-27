@@ -1,17 +1,17 @@
 :root {
-  --color-core-lightest: #F4F6ED;
-  --color-core-lighter: #CED0C7;
-  --color-core-light: #A8AAA1;
-  --color-core: #82847B;
-  --color-core-dark: #5C5E55;
-  --color-core-darker: #35372E;
-  --color-core-darkest: #0F1108;
+  --color-core-lightest: #f4f6ed;
+  --color-core-lighter: #ced0c7;
+  --color-core-light: #a8aaa1;
+  --color-core: #82847b;
+  --color-core-dark: #5c5e55;
+  --color-core-darker: #35372e;
+  --color-core-darkest: #0f1108;
 
-  --color-accent-lightest: #C9FFFF;
-  --color-accent-lighter: #96CCFF;
-  --color-accent-light: #6399F1;
-  --color-accent: #3066BE;
-  --color-accent-dark: #00338B;
+  --color-accent-lightest: #c9ffff;
+  --color-accent-lighter: #96ccff;
+  --color-accent-light: #6399f1;
+  --color-accent: #3066be;
+  --color-accent-dark: #00338b;
   --color-accent-darker: #000058;
   --color-accent-darkest: #000025;
 
@@ -89,10 +89,6 @@ a:focus {
   color: var(--color-accent-dark);
 }
 
-a:focus {
-  outline-offset: -2px;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -100,4 +96,10 @@ a:focus {
 sup,
 sub {
   font-size: var(--font-size-0);
+}
+
+@media (min-width: 800px) {
+  html {
+    font-size: 1.1em;
+  }
 }

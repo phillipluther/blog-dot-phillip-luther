@@ -13,12 +13,13 @@
   text-decoration: none;
   display: block;
   padding: 0 calc(var(--space-xs) / 2);
-  color: inherit;
+  color: var(--color-accent-lighter);
   line-height: 48px; /* min tap-target size */
   white-space: nowrap;
 }
 
 .link:hover,
 .link:focus {
+  color: var(--color-accent-lightest);
   text-decoration: underline;
 }

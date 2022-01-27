@@ -35,19 +35,11 @@
   transition: border 180ms;
 }
 
-.link:hover::after {
-  border: 3px solid var(--color-accent-dark);
+.link:hover,
+.link:focus {
+  color: var(--color-accent-lightest);
 }
 
-@media screen and (min-width: 1100px) {
-  .item {
-    margin-left: calc(var(--space-xs) / 2);
-  }
-
-  .link::after {
-    top: -6px;
-    right: -6px;
-    bottom: -6px;
-    left: -6px;
-  }  
+.link:hover::after {
+  border: 3px solid var(--color-accent-lightest);
 }

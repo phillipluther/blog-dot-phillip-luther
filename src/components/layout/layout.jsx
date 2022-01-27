@@ -66,8 +66,8 @@ const Layout = ({
         className={styles.overlay}
       >
         <Container>
-          <DialogContent className={styles.modal}>
-            <VisuallyHidden as="h2">Primary Navigation</VisuallyHidden>
+          <DialogContent className={styles.modal} aria-labelledby="navLabel">
+            <VisuallyHidden id="navLabel" as="h2">Primary Navigation</VisuallyHidden>
 
             <button className={styles.toggle} onClick={() => showMenu(false)}>
               <VisuallyHidden>Close</VisuallyHidden>

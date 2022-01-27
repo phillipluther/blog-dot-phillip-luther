@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 const Seo = ({
   title,
   description,
-  image = '/images/code-audio-default-social-card.png',
+  image = '/images/blog-phillip-luther-social-card.png',
   article,
   keywords,
   children,

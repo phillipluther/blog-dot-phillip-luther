@@ -22,28 +22,26 @@ const ContactPage = ({ data }) => {
       <Seo
         title="Contact Info"
         description={
-          `Comments, questions, or feedback for ${siteMetadata.name}? Email and Twitter are the best places to contact us.`
+          `Comments, questions, or feedback for blog? Ideas for new posts? Email and Twitter are the best places to contact me.`
         }
       />
 
-      <PageTitle>{siteMetadata.name} Contact Info</PageTitle>
+      <PageTitle>Contact Info</PageTitle>
 
       <VisuallyHidden as="h2">Contact Methods</VisuallyHidden>
       <ContactInfo />
 
       <Heading as="h2">Get In Touch!</Heading>
-      <p>Questions, comments, ideas, or feedback for {siteMetadata.name}?</p> 
-      <p>Found something wonky with the site itself?</p>
-      <p>Let us know!</p>
+      <p>
+        Questions, comments, ideas, or feedback for the blog? Found something wonky with the site itself? Hate the fonts?
+      </p>
+      <p>Let me know!</p>
       <p>
         <a href={contactLinks.email}>Email</a>{' '}
-        is the best way to get in touch because we're old-fashioned like that. We're
-        infrequently active on <a href={contactLinks.twitter}>Twitter</a>, as well, so a
-        well-timed and thoughtful at-mention also
-        works.
+        is the best way to get in touch because I'm old-fashioned like that. I'm infrequently active on <a href={contactLinks.twitter}>Twitter</a>, as well, so a well-timed and thoughtful at-mention also works.
       </p>
       <p>
-        If you do email us, rest assured your email will never ever be used for anything other than writing you back.
+        If you do email me, rest assured your email will never ever be used for anything other than writing you back.
       </p>
     </Layout>
   );
@@ -55,7 +53,6 @@ export const query = graphql`
   query {
     site {
       siteMetadata {
-        name
         social {
           name
           link

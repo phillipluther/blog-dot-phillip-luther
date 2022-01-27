@@ -30,18 +30,3 @@
   margin-right: var(--space-micro);
   margin-bottom: 0;
 }
-
-@media screen and (min-width: 640px) {
-  .image {
-    width: 144px;
-    height: 144px;
-    margin: 0 0 var(--space-micro) var(--space-sm);
-    float: right;
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  .image {
-    margin: 0 0 var(--space-xs) var(--space-md);
-  }
-}

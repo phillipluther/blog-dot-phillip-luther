@@ -5,7 +5,7 @@
 }
 
 .item {
-  margin-bottom: var(--space-xs);
+  margin-bottom: var(--space-sm);
 }
 
 .title {
@@ -13,10 +13,4 @@
   text-transform: capitalize;
   font-size: var(--font-size-0);
   color: var(--color-core-darker);
-}
-
-@media screen and (min-width: 760px) {
-  .item {
-    margin-bottom: var(--space-sm);
-  }  
 }
