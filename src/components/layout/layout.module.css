@@ -91,6 +91,11 @@
 
 .modal {
   color: var(--color-core-lightest);
+  width: auto;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  outline: none;
 }
 
 .headerNav ul {
@@ -117,10 +122,6 @@
   color: var(--color-accent-lightest);
 }
 
-.headerSocial {
-  margin-left: var(--space-xs);
-}
-
 .headerSocial li {
   width: 56px;
   height: 56px;
@@ -129,8 +130,7 @@
 .headerHeading {
   padding-top: var(--space-sm);
   margin-bottom: var(--space-xs);
-  margin-left: var(--space-sm);
-  color: var(--color-core-lighter);
+  color: var(--color-core-lightest);
 }
 
 .main {

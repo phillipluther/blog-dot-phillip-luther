@@ -2,8 +2,8 @@
   display: block;
   width: 100%;
   color: var(--color-core-darker);
-  margin: 0 0 var(--space-xs);
-  padding: 0 0 var(--space-xs);
+  margin: 0 0 var(--space-sm);
+  padding: 0 0 var(--space-sm);
   position: relative;
 }
 
@@ -12,21 +12,8 @@
   display: block;
   width: 20%;
   max-width: 96px;
-  border-bottom: 3px solid var(--color-core);
+  border-bottom: 2px solid var(--color-core-light);
   position: absolute;
   left: 0;
   bottom: 0;
-}
-
-@media screen and (min-width: 640px) {
-  .title {
-    margin: 0 0 var(--space-sm);
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  .title {
-    padding: 0 0 var(--space-sm);
-    margin: 0 0 var(--space-md);
-  }
 }

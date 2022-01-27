@@ -10,7 +10,7 @@ export type PageTitleTypes = {
 };
 
 const PageTitle = ({ as = 'h1', children, className, ...props }: PageTitleTypes) => (
-  <Heading as={as} size="xs" className={classnames(title, className)} {...props}>
+  <Heading as={as} size="sm" className={classnames(title, className)} {...props}>
     {children}
   </Heading>
 );

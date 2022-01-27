@@ -8,6 +8,7 @@ import Heading from '../heading';
 import Social from '../social';
 import Container from '../container';
 import Logo from '../../images/blog-phillip-luther-logo.inline.svg';
+import '@reach/dialog/styles.css';
 import * as styles from './layout.module.css';
 import '../global-styles.css';
 
@@ -36,7 +37,7 @@ const Layout = ({
   return (
     <>
       <header id="header" className={styles.header}>
-        <Container className={styles.headerContent} large>
+        <Container className={styles.headerContent}>
           <button
             type="button"
             className={styles.toggle}
@@ -64,7 +65,7 @@ const Layout = ({
         onDismiss={() => showMenu(false)}
         className={styles.overlay}
       >
-        <Container large>
+        <Container>
           <DialogContent className={styles.modal}>
             <VisuallyHidden as="h2">Primary Navigation</VisuallyHidden>
 
@@ -88,14 +89,14 @@ const Layout = ({
         </Container>
       </DialogOverlay>
 
-      <Container as="main" className={styles.main} large>
+      <Container as="main" className={styles.main}>
         {children}
       </Container>
 
       <footer id="footer" className={styles.footer}>
         <VisuallyHidden as="h2">Page Footer</VisuallyHidden>
 
-        <Container as="div" className={styles.footerContent} large>
+        <Container as="div" className={styles.footerContent}>
           <section className={classnames(styles.footerMenu, styles.footerSection)}>
             <VisuallyHidden as="h3">Footer Navigation</VisuallyHidden>
             <PrimaryNav className={styles.footerNav} />
