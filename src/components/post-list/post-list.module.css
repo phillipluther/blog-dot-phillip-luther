@@ -20,11 +20,22 @@
 .cover,
 .date {
   width: 100%;
-  margin: 0 0 var(--space-xs);
+  margin: 0 0 1rem;
 }
 
 .title {
   order: 2;
+}
+
+.titleLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.titleLink:hover,
+.titleLink:focus {
+  text-decoration: underline;
+  color: var(--color-accent-dark);
 }
 
 .cover {
@@ -49,10 +60,6 @@
     padding-top: var(--space-xs);
     padding-bottom: var(--space-xs);
   }
-
-  .title {
-    /* font-size: var(--font-size-3); */
-  }
 }
 
 @media (min-width: 800px) {
@@ -61,6 +68,6 @@
   }
 
   .item {
-    padding-left: calc(var(--space-sm) + 25%);
+    padding-left: calc(var(--space-md) + 25%);
   }
 }

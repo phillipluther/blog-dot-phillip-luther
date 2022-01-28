@@ -8,6 +8,7 @@ import PageTitle from '../components/page-title';
 import TagList from '../components/tag-list';
 import Date from '../components/date';
 import Seo from '../components/seo';
+import Banner from '../components/banner';
 import AuthorCard from '../components/author-card';
 
 const BlogPost = ({ data }) => {
@@ -24,8 +25,6 @@ const BlogPost = ({ data }) => {
 
   const image = getImage(cover);
 
-  console.log('IMAGE', image);
-
   return (
     <Layout>
       <Seo
@@ -38,22 +37,17 @@ const BlogPost = ({ data }) => {
       />
 
       <article>
-        <header>
-          <PageTitle>{title}</PageTitle>
-          <Date dateString={date} />
-          <p>{description}</p>
-
-          <figure>
-            <GatsbyImage image={image} alt={coverAlt} />
-            <figcaption>
-              <cite>
-                Photo Credit:
-                {' '}
-                <a href={coverCreditLink}>{coverCredit}</a>
-              </cite>
-            </figcaption>
-          </figure>
-        </header>
+        <Banner
+          headline={title}
+          date={date}
+          summary={description}
+          image={{
+            src: image,
+            alt: coverAlt,
+            credit: coverCredit,
+            creditLink: coverCreditLink,
+          }}
+        />
 
         <MDXRenderer>{data.mdx.body}</MDXRenderer>
 

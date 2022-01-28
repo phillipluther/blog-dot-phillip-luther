@@ -1,0 +1,39 @@
+.wrapper {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image {
+  --image-offset: calc(var(--space-sm) * -1);
+
+  position: relative;
+  z-index: -1;
+  order: 1;
+  width: calc(100% + (var(--space-sm) * 2));
+  margin: var(--image-offset) var(--image-offset) 0;
+}
+
+.content {
+  order: 2;
+}
+
+.credit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: var(--font-size-0);
+  padding: 4px;
+  background: #0f1108aa; /* --color-color-darkest */
+  color: var(--color-core-lighter);
+}
+
+.credit a {
+  color: var(--color-accent-light);
+}
+
+.credit a:hover,
+.credit a:focus {
+  color: var(--color-accent-lighter);
+}

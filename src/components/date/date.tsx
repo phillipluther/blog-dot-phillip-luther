@@ -17,12 +17,19 @@ export const indexedMonths = [
   'December',
 ];
 
-const DateX = ({ className, dateString, ...props }) => {
+const DateX = ({
+  className,
+  dateString,
+  ...props
+}: {
+  className?: string,
+  dateString: string,
+}) => {
   const d = new Date(dateString);
 
   return (
     <time
-      dateTime={d.getTime()}
+      dateTime={d.getTime().toString()}
       className={classnames(date, className)}
       {...props}
     >
