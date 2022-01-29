@@ -5,8 +5,8 @@ import { getImage } from 'gatsby-plugin-image';
 import VisuallyHidden from '@reach/visually-hidden';
 import Layout from '../components/layout';
 import TagList from '../components/tag-list';
-import Date from '../components/date';
 import Seo from '../components/seo';
+import Container from '../components/container';
 import Banner from '../components/banner';
 import AuthorCard from '../components/author-card';
 
@@ -48,7 +48,9 @@ const BlogPost = ({ data }) => {
           }}
         />
 
-        <MDXRenderer>{data.mdx.body}</MDXRenderer>
+        <Container noX>
+          <MDXRenderer>{data.mdx.body}</MDXRenderer>
+        </Container>
 
         <footer>
           <VisuallyHidden as="h2">Supplemental Content</VisuallyHidden>

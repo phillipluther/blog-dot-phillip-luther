@@ -50,14 +50,13 @@
   .cover {
     position: absolute;
     top: 0;
-    right: calc(var(--space-sm) * -1);
+    left: calc(var(--space-sm) * -1);
     max-width: 25%;
     height: 100%;
   }
 
   .item {
-    padding-right: 25%;
-    margin-top: calc(var(--space-xs) * -1);
+    padding-left: 25%;
     padding-top: var(--space-xs);
     padding-bottom: var(--space-xs);
   }
@@ -65,10 +64,10 @@
 
 @media (min-width: 800px) {
   .cover {
-    right: calc(var(--space-md) * -1);
+    left: 0;
   }
 
   .item {
-    padding-right: calc(var(--space-md) + 25%);
+    padding-left: calc(25% + var(--space-md));
   }
 }

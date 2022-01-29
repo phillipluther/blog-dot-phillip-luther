@@ -25,7 +25,13 @@
 }
 
 .xl {
-  font-size: var(--font-size-5);
+  font-size: var(--font-size-6);
+}
+
+@media (min-width: 500px) {
+  .xl {
+    font-size: var(--font-size-7);
+  }  
 }
 
 @media (min-width: 800px) {  
@@ -46,6 +52,7 @@
   }
   
   .xl {
-    font-size: var(--font-size-6);
+    font-size: var(--font-size-8);
+    line-height: 1.1;
   }  
 }

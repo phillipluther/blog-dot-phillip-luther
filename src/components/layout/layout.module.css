@@ -1,8 +1,5 @@
 .header {
   font-family: var(--display-font);
-}
-
-.headerContent {
   position: relative;
   display: flex;
   justify-content: flex-start;
@@ -24,13 +21,13 @@
 
 .logo,
 .toggle {
-  height: 56px;
+  height: 64px;
 }
 
 .toggle {
   display: block;
-  width: 56px;
   margin: 0 2px 0 0;
+  padding: 0 var(--space-sm);
   padding: 0;
   border: 0;
   background: var(--color-core-darker);
@@ -38,6 +35,8 @@
 
 .menuToggle {
   background: var(--color-core-darkest);
+  margin-left: calc(var(--space-sm) * -1);
+  margin-bottom: var(--space-sm);
 }
 
 .hamburger,
@@ -54,6 +53,7 @@
   height: 0;
   position: relative;
   top: 0px;
+  width: var(--space-md);
 }
 
 .hamburger::before,
@@ -85,7 +85,7 @@
 }
 
 .overlay {
-  background: #0f1108cc; /* Hex + Alpha, --color-core-darkest */
+  background: #ced0c7dd; /* Hex + Alpha, --color-core-lighter */
   position: fixed;
   left: 0;
   top: 0;
@@ -126,10 +126,19 @@
   height: 56px;
 }
 
+.headerSocial a,
+.headerSocial a:hover,
+.headerSocial a:focus {
+  color: var(--color-core-darkest);
+}
+
+.headerSocial a:hover::after {
+  border-color: var(--color-accent-darkest);
+}
+
 .headerHeading {
   padding-top: var(--space-sm);
   margin-bottom: var(--space-xs);
-  color: var(--color-core-lightest);
 }
 
 .main {
@@ -183,6 +192,12 @@
   }
 }
 
+@media (max-width: 799px) {
+  .header {
+    padding-left: 0;
+  }
+}
+
 @media (min-width: 500px) {
   .footerMenu {
     display: flex;
@@ -203,8 +218,13 @@
   .toggle {
     height: 72px;
   }
-  
+
   .headerNav a {
     line-height: 56px;
+  }
+
+  .menuToggle {
+    margin-left: 0;
+    margin-bottom: var(--space-md);
   }
 }

@@ -27,11 +27,9 @@ const Banner = ({
   },
 }) => (
   <header className={classnames(styles.wrapper, className)} {...props}>
-    <div className={styles.content}>
-      <Heading as={headingLevel} size="xl" className={styles.heading}>{headline}</Heading>
-      {date && <Date dateString={date} className={styles.date} />}
-      {summary && <p className={styles.summary}>{summary}</p>}
-    </div>
+    <Heading as={headingLevel} size="xl" className={styles.heading}>{headline}</Heading>
+    {date && <p><Date dateString={date} className={styles.date} /></p>}
+    {summary && <p className={styles.summary}>{summary}</p>}
 
     <figure className={styles.image}>
       <GatsbyImage image={image.src} alt={image.alt} />

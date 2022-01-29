@@ -36,29 +36,27 @@ const Layout = ({
 
   return (
     <>
-      <header id="header" className={styles.header}>
-        <Container className={styles.headerContent}>
-          <button
-            type="button"
-            className={styles.toggle}
-            onClick={() => showMenu(true)}
-          >
-            <VisuallyHidden>
-              {isMenuShowing ? 'Hide' : 'Show'}
-              {' '}
-              Navigation Menu
-            </VisuallyHidden>
-            <span className={burgerClasses} aria-hidden />
-          </button>
+      <Container as="header" className={styles.header}>
+        <button
+          type="button"
+          className={styles.toggle}
+          onClick={() => showMenu(true)}
+        >
+          <VisuallyHidden>
+            {isMenuShowing ? 'Hide' : 'Show'}
+            {' '}
+            Navigation Menu
+          </VisuallyHidden>
+          <span className={burgerClasses} aria-hidden />
+        </button>
 
-          <TitleTag className={styles.branding}>
-            <Link to="/" className={styles.logoLink}>
-              <Logo className={styles.logo} aria-hidden="true" alt="" />
-              <VisuallyHidden>{metadata.name}</VisuallyHidden>
-            </Link>
-          </TitleTag>
-        </Container>
-      </header>
+        <TitleTag className={styles.branding}>
+          <Link to="/" className={styles.logoLink}>
+            <Logo className={styles.logo} aria-hidden="true" alt="" />
+            <VisuallyHidden>{metadata.name}</VisuallyHidden>
+          </Link>
+        </TitleTag>
+      </Container>
 
       <DialogOverlay
         isOpen={isMenuShowing}
