@@ -1,14 +1,7 @@
 .base {
   font-family: var(--display-font);
-  letter-spacing: -1px;
-}
-
-.base:not(.bold) {
-  font-weight: 700;
-}
-
-.bold {
-  font-weight: 900;
+  font-weight: 400;
+  color: var(--color-core-darker);
 }
 
 .base {

@@ -1,0 +1,22 @@
+.title {
+  font-size: 1rem;
+  display: inline-block;
+  color: var(--color-core-lightest);
+  background: var(--color-core-darker);
+  margin: 0 0 var(--space-sm) calc(var(--space-sm) * -1);
+  padding: var(--space-sm) var(--space-xs) var(--space-xs) var(--space-sm);
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 800px) {
+  .title {
+    margin: 0 0 var(--space-md) calc(var(--space-md) * -1);
+    padding: var(--space-md) var(--space-xs) var(--space-xs) var(--space-md);  
+  }
+}

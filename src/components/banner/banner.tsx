@@ -2,11 +2,12 @@ import * as React from 'react';
 import classnames from 'classnames';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import Date from '../date';
+import Heading from '../heading';
 import * as styles from './banner.module.css';
 
 const Banner = ({
   className,
-  headingLevel: Heading = 'h1',
+  headingLevel = 'h1',
   image,
   headline,
   date,
@@ -27,7 +28,7 @@ const Banner = ({
 }) => (
   <header className={classnames(styles.wrapper, className)} {...props}>
     <div className={styles.content}>
-      <Heading className={styles.heading}>{headline}</Heading>
+      <Heading as={headingLevel} size="xl" className={styles.heading}>{headline}</Heading>
       {date && <Date dateString={date} className={styles.date} />}
       {summary && <p className={styles.summary}>{summary}</p>}
     </div>

@@ -1,5 +1,7 @@
 .heading {
-  line-height: 1.25;
+  line-height: 1.15;
+  color: var(--color-core-darker);
+  text-transform: uppercase
 }
 
 .heading:not(:first-child) {
@@ -27,6 +29,14 @@
 }
 
 @media (min-width: 800px) {  
+  .xs {
+    font-size: var(--font-size-2);
+  }
+  
+  .sm {
+    font-size: var(--font-size-3);
+  }  
+
   .md {
     font-size: var(--font-size-4);
   }
@@ -36,6 +46,6 @@
   }
   
   .xl {
-    font-size: var(--font-size-7);
+    font-size: var(--font-size-6);
   }  
 }

@@ -22,3 +22,21 @@
 .left {
   padding-left: var(--space-sm);
 }
+
+@media (min-width: 800px) {
+  .top {
+    padding-top: var(--space-md);
+  }
+  
+  .right {
+    padding-right: var(--space-md);
+  }
+  
+  .bottom {
+    padding-bottom: var(--space-md);
+  }
+  
+  .left {
+    padding-left: var(--space-md);
+  }
+}

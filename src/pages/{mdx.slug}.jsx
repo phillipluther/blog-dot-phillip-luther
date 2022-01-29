@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { getImage } from 'gatsby-plugin-image';
 import VisuallyHidden from '@reach/visually-hidden';
 import Layout from '../components/layout';
-import PageTitle from '../components/page-title';
 import TagList from '../components/tag-list';
 import Date from '../components/date';
 import Seo from '../components/seo';

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
-import PageTitle from '../components/page-title';
+import SectionTitle from '../components/section-title';
 import Seo from '../components/seo';
 
 const IndexPage = ({ data }) => {
@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
     <Layout isHome>
       <Seo title="Home" />
 
-      <PageTitle as="h2">{siteMetadata.siteName}</PageTitle>
+      <SectionTitle as="h2">{siteMetadata.siteName}</SectionTitle>
       <p>Home Page</p>
     </Layout>
   );

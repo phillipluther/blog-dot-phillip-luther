@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
-import PageTitle from '../components/page-title';
+import SectionTitle from '../components/section-title';
 import PostList from '../components/post-list';
 import Seo from '../components/seo';
 
@@ -15,7 +15,7 @@ const PostsPage = ({ data, pageContext }) => {
         }
       />
 
-      <PageTitle>Posts Tagged: {pageContext.tag}</PageTitle>
+      <SectionTitle as="h1">Posts Tagged: {pageContext.tag}</SectionTitle>
       <PostList posts={data.allMdx.nodes} />
     </Layout>
   );

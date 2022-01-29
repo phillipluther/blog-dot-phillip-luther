@@ -21,7 +21,7 @@
 
 .credit {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   font-size: var(--font-size-0);
   padding: 4px;
@@ -36,4 +36,8 @@
 .credit a:hover,
 .credit a:focus {
   color: var(--color-accent-lighter);
+}
+
+.heading {
+  margin-top: var(--space-sm);
 }

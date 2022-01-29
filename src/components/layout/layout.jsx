@@ -69,7 +69,10 @@ const Layout = ({
           <DialogContent className={styles.modal} aria-labelledby="navLabel">
             <VisuallyHidden id="navLabel" as="h2">Primary Navigation</VisuallyHidden>
 
-            <button className={styles.toggle} onClick={() => showMenu(false)}>
+            <button
+              className={classnames(styles.toggle, styles.menuToggle)}
+              onClick={() => showMenu(false)}
+            >
               <VisuallyHidden>Close</VisuallyHidden>
               <span className={burgerClasses} aria-hidden />
             </button>

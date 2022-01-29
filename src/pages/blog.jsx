@@ -2,7 +2,7 @@ import * as React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import PostList from '../components/post-list';
-import PageTitle from '../components/page-title';
+import SectionTitle from '../components/section-title';
 import Seo from '../components/seo';
 
 const BlogPage = ({ data }) => {
@@ -16,7 +16,7 @@ const BlogPage = ({ data }) => {
         }
       />
 
-      <PageTitle>All Blog Posts</PageTitle>
+      <SectionTitle as="h1">All Blog Posts</SectionTitle>
       <PostList posts={data.allMdx.nodes} headingLevel="h2" />
     </Layout>
   );

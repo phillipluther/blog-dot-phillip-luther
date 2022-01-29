@@ -1,18 +1,18 @@
 import * as React from 'react';
 import classnames from 'classnames';
 import Heading from '../heading';
-import { title } from './page-title.module.css';
+import { title } from './section-title.module.css';
 
-export type PageTitleTypes = {
+export type SectionTitleType = {
   as?: React.ElementType,
   children: React.ReactNode,
   className?: string,
 };
 
-const PageTitle = ({ as = 'h1', children, className, ...props }: PageTitleTypes) => (
+const SectionTitle = ({ as = 'h1', children, className, ...props }: SectionTitleType) => (
   <Heading as={as} size="sm" className={classnames(title, className)} {...props}>
     {children}
   </Heading>
 );
 
-export default PageTitle;
+export default SectionTitle;

@@ -34,7 +34,7 @@
   --space-lg: 38px;
   --space-xl: 59px;
 
-  --display-font: Chivo, sans-serif;
+  --display-font: Anton, sans-serif;
 }
 
 html,
@@ -72,6 +72,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-weight: normal;
   margin-top: 1.25em;
 }
 
@@ -98,8 +99,14 @@ sub {
   font-size: var(--font-size-0);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 500px) {
   html {
     font-size: 1.1em;
+  }
+}
+
+@media (min-width: 800px) {
+  html {
+    font-size: 1.2em;
   }
 }

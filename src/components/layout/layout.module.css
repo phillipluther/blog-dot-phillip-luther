@@ -24,7 +24,7 @@
 
 .logo,
 .toggle {
-  height: 80px;
+  height: 56px;
 }
 
 .toggle {
@@ -34,6 +34,10 @@
   padding: 0;
   border: 0;
   background: var(--color-core-darker);
+}
+
+.menuToggle {
+  background: var(--color-core-darkest);
 }
 
 .hamburger,
@@ -195,6 +199,11 @@
 }
 
 @media (min-width: 800px) {
+  .logo,
+  .toggle {
+    height: 72px;
+  }
+  
   .headerNav a {
     line-height: 56px;
   }

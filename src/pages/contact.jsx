@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import VisuallyHidden from '@reach/visually-hidden';
 import Layout from '../components/layout';
 import Heading from '../components/heading';
-import PageTitle from '../components/page-title';
+import SectionTitle from '../components/section-title';
 import Seo from '../components/seo';
 import ContactInfo from '../components/contact-info';
 
@@ -26,7 +26,7 @@ const ContactPage = ({ data }) => {
         }
       />
 
-      <PageTitle>Contact Info</PageTitle>
+      <SectionTitle as="h1">Contact Info</SectionTitle>
 
       <VisuallyHidden as="h2">Contact Methods</VisuallyHidden>
       <ContactInfo />
