@@ -3,11 +3,12 @@ import classnames from 'classnames';
 import DisplayFont from '../display-font';
 import * as styles from './heading.module.css';
 
-export type HeadingTypes = {
+export type HeadingProps = {
   as?: React.ElementType,
   bold?: boolean,
   children: React.ReactNode,
   className?: string,
+  flush?: boolean,
   size?: string,
 };
 
@@ -16,9 +17,10 @@ const Heading = ({
   bold = true,
   children,
   className,
+  flush = false,
   size,
   ...props
-}: HeadingTypes) => (
+}: HeadingProps) => (
   <DisplayFont
     as={as}
     bold={bold}
@@ -30,6 +32,7 @@ const Heading = ({
         [styles.sm]: !size && (as === 'h4'),
         [styles.xs]: !size && ((as === 'h5') || (as === 'h6')),
         [styles[size]]: size,
+        [styles.flush]: flush === false,
       },
       className,
     )}

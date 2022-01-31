@@ -4,8 +4,12 @@
   text-transform: uppercase
 }
 
-.heading:not(:first-child) {
+.heading:not(.flush) {
   margin-top: 1.25em;
+}
+
+.flush {
+  margin-top: 0;
 }
 
 .xs {

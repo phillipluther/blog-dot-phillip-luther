@@ -27,11 +27,7 @@ const Banner = ({
   },
 }) => (
   <header className={classnames(styles.wrapper, className)} {...props}>
-    <Heading as={headingLevel} size="xl" className={styles.heading}>{headline}</Heading>
-    {date && <p><Date dateString={date} className={styles.date} /></p>}
-    {summary && <p className={styles.summary}>{summary}</p>}
-
-    <figure className={styles.image}>
+    <figure className={styles.image} aria-hidden>
       <GatsbyImage image={image.src} alt={image.alt} />
       {(image.credit || image.creditLink) && (
         <figcaption className={styles.credit}>
@@ -39,7 +35,9 @@ const Banner = ({
             Photo Credit:
             {' '}
             {image.creditLink ? (
-              <a href={image.creditLink}>{image.credit || image.creditLink}</a>
+              <a tabIndex={-1} href={image.creditLink}>
+                {image.credit || image.creditLink}
+              </a>
             ) : (
               <span>{image.credit}</span>
             )}
@@ -47,6 +45,19 @@ const Banner = ({
         </figcaption>
       )}
     </figure>
+
+    <div className={styles.content}>
+      <Heading
+        as={headingLevel}
+        size="xl"
+        className={styles.heading}
+        flush
+      >
+        {headline}
+      </Heading>
+      {date && <p><Date dateString={date} className={styles.date} /></p>}
+      {summary && <p className={styles.summary}>{summary}</p>}
+    </div>
   </header>
 );
 

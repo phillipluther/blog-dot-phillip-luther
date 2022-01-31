@@ -1,10 +1,7 @@
 .wrapper {
   position: relative;
   z-index: 0;
-}
-
-.heading {
-  margin-top: 0;
+  margin-top: calc(var(--space-sm) * -1);
 }
 
 .image {
@@ -16,6 +13,11 @@
   margin: 0 var(--image-offset);
 }
 
+.date,
+.summary {
+  color: var(--color-core-dark);
+}
+
 .date {
   font-size: inherit;
 }
@@ -23,7 +25,6 @@
 .summary {
   font-size: var(--font-size-2);
   font-style: italic;
-  color: var(--color-core-darker);
 }
 
 .credit {
@@ -31,13 +32,13 @@
   bottom: 0;
   right: 0;
   font-size: var(--font-size-0);
-  padding: 4px;
+  padding: calc(var(--space-xs) / 2) var(--space-xs);
   background: #0f1108aa; /* --color-color-darkest */
   color: var(--color-core-lighter);
 }
 
 .credit a {
-  color: var(--color-accent-light);
+  color: var(--color-accent-lighter);
 }
 
 .credit a:hover,
@@ -46,8 +47,31 @@
 }
 
 @media (min-width: 800px) {
+  .wrapper {
+    margin-top: calc(var(--space-md) * -1);
+  }
+
   .image {
-    width: calc(100% + var(--space-md) * 2);
-    margin-left: calc(var(--space-md) * -1);
-  }  
+    width: 100vw;
+    height: 56.25vw;
+    overflow: hidden;
+    margin-left: calc(((100vw - 800px) / 2) * -1 - var(--space-md));
+  }
+
+  .content {
+    max-width: 800px; /* matches container max-width */
+  }
+}
+
+/*
+ * sizing algo above breaks at max image width so making explicit adjusts for the
+ * known size
+ */
+ @media (min-width: 1280px) {
+  .image {
+    /* 240px = -(image max-width [1280px] - container max-width [800px]) / 2 */
+    margin-left: calc(-240px - var(--space-md));
+    width: 1280px;
+    height: 720px;
+  }
 }

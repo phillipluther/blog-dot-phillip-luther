@@ -4,12 +4,12 @@ import classnames from 'classnames';
 import slugify from 'slugify';
 import * as styles from './tag-list.module.css';
 
-export type TagListType = {
+export type TagListProps = {
   tags: string[],
   className?: string,
 };
 
-const TagList = ({ tags, className, ...props }: TagListType) => (
+const TagList = ({ tags, className, ...props }: TagListProps) => (
   <ul className={classnames(styles.list, className)} {...props}>
     {tags.map((tagName) => (
       <li key={tagName}>
