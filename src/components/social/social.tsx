@@ -3,20 +3,21 @@ import classnames from 'classnames';
 import { graphql, useStaticQuery } from 'gatsby';
 import { FaTwitter, FaYoutube, FaGithub, FaEnvelope } from 'react-icons/fa';
 import VisuallyHidden from '@reach/visually-hidden';
-import * as styles from './social.module.css';
 
 const iconMap = {
   twitter: FaTwitter,
   youtube: FaYoutube,
   github: FaGithub,
   email: FaEnvelope,
+} as {
+  [key: string]: React.ElementType,
 };
 
 const Social = ({ className, ...props }: { className?: string }) => {
   const { site } = useStaticQuery(query);
 
   return (
-    <ul className={classnames(styles.list, className)} {...props}>
+    <ul className={classnames(className)} {...props}>
       {site.siteMetadata.social.map(({ link, label, name }: {
         link: string,
         label: string,
@@ -26,8 +27,8 @@ const Social = ({ className, ...props }: { className?: string }) => {
         const Label = Icon ? VisuallyHidden : 'span';
 
         return (
-          <li key={name} className={styles.item}>
-            <a href={link} className={styles.link}>
+          <li key={name}>
+            <a href={link}>
               {Icon && <Icon aria-hidden="true" />}
               <Label>{label}</Label>
             </a>

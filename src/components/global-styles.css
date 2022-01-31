@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --color-core-lightest: #f4f6ed;
   --color-core-lighter: #ced0c7;
   --color-core-light: #a8aaa1;
@@ -15,7 +15,7 @@
   --color-accent-darker: #000058;
   --color-accent-darkest: #000025;
 
-  /* 1.25 scaling starting at 1em browser default (usually 16px) */
+  // 1.25 scaling starting at 1em browser default (usually 16px)
   --font-size-0: 0.8rem;
   --font-size-1: 1rem;
   --font-size-2: 1.25rem;
@@ -27,7 +27,7 @@
   --font-size-8: 4.768rem;
   --font-size-9: 5.96rem;
 
-  /* 1.563 scaling based on 24px as medium */
+  // 1.563 scaling based on 24px as medium
   --space-xs: 9px;
   --space-sm: 15px;
   --space-md: 24px;
@@ -109,4 +109,4 @@ sub {
   html {
     font-size: 1.2em;
   }
-}
+} */
