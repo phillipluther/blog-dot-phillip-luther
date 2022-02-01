@@ -4,7 +4,6 @@ import * as React from 'react';
 
 import Date from '../date';
 import Heading from '../heading';
-import * as styles from './banner.module.css';
 
 const Banner = ({
   className,
@@ -27,11 +26,11 @@ const Banner = ({
     creditLink?: string;
   };
 }) => (
-  <header className={classnames(styles.wrapper, className)} {...props}>
-    <figure className={styles.image} aria-hidden>
+  <header className={classnames(className)} {...props}>
+    <figure aria-hidden>
       <GatsbyImage image={image.src} alt={image.alt} />
       {(image.credit || image.creditLink) && (
-        <figcaption className={styles.credit}>
+        <figcaption>
           <cite>
             Photo Credit:{' '}
             {image.creditLink ? (
@@ -46,16 +45,16 @@ const Banner = ({
       )}
     </figure>
 
-    <div className={styles.content}>
-      <Heading as={headingLevel} size="xl" className={styles.heading} flush>
+    <div>
+      <Heading as={headingLevel} size="xl" flush>
         {headline}
       </Heading>
       {date && (
         <p>
-          <Date dateString={date} className={styles.date} />
+          <Date dateString={date} />
         </p>
       )}
-      {summary && <p className={styles.summary}>{summary}</p>}
+      {summary && <p>{summary}</p>}
     </div>
   </header>
 );

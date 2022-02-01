@@ -1,8 +1,6 @@
 import classnames from 'classnames';
 import * as React from 'react';
 
-import * as styles from './display-font.module.css';
-
 export type DisplayFontType = {
   as?: React.ElementType;
   children: React.ReactNode;
@@ -18,13 +16,7 @@ const DisplayFont = ({
   ...props
 }: DisplayFontType) => (
   <Tag
-    className={classnames(
-      styles.base,
-      {
-        [styles.bold]: bold === true,
-      },
-      className,
-    )}
+    className={classnames(className)}
     {...props}
   >
     {children}

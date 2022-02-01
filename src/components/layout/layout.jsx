@@ -1,5 +1,5 @@
 import VisuallyHidden from '@reach/visually-hidden';
-import classnames from 'classnames';
+// import classnames from 'classnames';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import * as React from 'react';
 

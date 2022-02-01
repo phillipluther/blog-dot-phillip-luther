@@ -1,9 +1,0 @@
-.base {
-  font-family: var(--display-font);
-  font-weight: 400;
-  color: var(--color-core-darker);
-}
-
-.base {
-  color: inherit;
-}

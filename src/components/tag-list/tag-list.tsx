@@ -3,18 +3,14 @@ import { Link } from 'gatsby';
 import * as React from 'react';
 import slugify from 'slugify';
 
-import * as styles from './tag-list.module.css';
-
-export type TagListProps = {
+const TagList = ({ tags, className, ...props }: {
   tags: string[];
   className?: string;
-};
-
-const TagList = ({ tags, className, ...props }: TagListProps) => (
-  <ul className={classnames(styles.list, className)} {...props}>
+}) => (
+  <ul className={classnames(className)} {...props}>
     {tags.map((tagName) => (
       <li key={tagName}>
-        <Link to={`/tags/${slugify(tagName)}`} className={styles.link}>
+        <Link to={`/tags/${slugify(tagName)}`}>
           {tagName}
         </Link>
       </li>
