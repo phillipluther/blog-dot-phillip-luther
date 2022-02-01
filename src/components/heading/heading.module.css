@@ -1,7 +1,7 @@
 .heading {
   line-height: 1.15;
   color: var(--color-core-darker);
-  text-transform: uppercase
+  text-transform: uppercase;
 }
 
 .heading:not(.flush) {
@@ -35,28 +35,28 @@
 @media (min-width: 500px) {
   .xl {
     font-size: var(--font-size-7);
-  }  
+  }
 }
 
-@media (min-width: 800px) {  
+@media (min-width: 800px) {
   .xs {
     font-size: var(--font-size-2);
   }
-  
+
   .sm {
     font-size: var(--font-size-3);
-  }  
+  }
 
   .md {
     font-size: var(--font-size-4);
   }
-  
+
   .lg {
     font-size: var(--font-size-5);
   }
-  
+
   .xl {
     font-size: var(--font-size-8);
     line-height: 1.1;
-  }  
+  }
 }

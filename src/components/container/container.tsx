@@ -1,5 +1,5 @@
-import * as React from 'react';
 import classnames from 'classnames';
+import * as React from 'react';
 
 const Container = ({
   className,
@@ -14,20 +14,16 @@ const Container = ({
   as: Tag = 'div',
   ...props
 }: {
-  className?: string,
-  children: React.ReactNode,
-  noX?: boolean,
-  noY?: boolean,
-  noTop?: boolean,
-  noBottom?: boolean,
-  noRight?: boolean,
-  noLeft?: boolean,
-  large?: boolean,
-  as?: React.ElementType,
-}) => (
-  <Tag {...props}>
-    {children}
-  </Tag>
-);
+  className?: string;
+  children: React.ReactNode;
+  noX?: boolean;
+  noY?: boolean;
+  noTop?: boolean;
+  noBottom?: boolean;
+  noRight?: boolean;
+  noLeft?: boolean;
+  large?: boolean;
+  as?: React.ElementType;
+}) => <Tag {...props}>{children}</Tag>;
 
 export default Container;

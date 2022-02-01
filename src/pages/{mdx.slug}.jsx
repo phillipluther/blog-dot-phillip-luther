@@ -1,14 +1,15 @@
-import * as React from 'react';
-import { graphql } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { getImage } from 'gatsby-plugin-image';
 import VisuallyHidden from '@reach/visually-hidden';
-import Layout from '../components/layout';
-import TagList from '../components/tag-list';
-import Seo from '../components/seo';
-import Container from '../components/container';
-import Banner from '../components/banner';
+import { graphql } from 'gatsby';
+import { getImage } from 'gatsby-plugin-image';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import * as React from 'react';
+
 import AuthorCard from '../components/author-card';
+import Banner from '../components/banner';
+import Container from '../components/container';
+import Layout from '../components/layout';
+import Seo from '../components/seo';
+import TagList from '../components/tag-list';
 
 const BlogPost = ({ data }) => {
   const {
@@ -69,7 +70,7 @@ const BlogPost = ({ data }) => {
 
 export const query = graphql`
   query ($id: String) {
-    mdx(id: {eq: $id}) {
+    mdx(id: { eq: $id }) {
       frontmatter {
         cover {
           childImageSharp {

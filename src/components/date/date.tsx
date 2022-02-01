@@ -1,6 +1,5 @@
-import * as React from 'react';
 import classnames from 'classnames';
-import { date } from './date.module.css';
+import * as React from 'react';
 
 export const indexedMonths = [
   'January',
@@ -17,25 +16,12 @@ export const indexedMonths = [
   'December',
 ];
 
-const DateX = ({
-  className,
-  dateString,
-  ...props
-}: {
-  className?: string,
-  dateString: string,
-}) => {
+const DateX = ({ className, dateString, ...props }: { className?: string; dateString: string }) => {
   const d = new Date(dateString);
 
   return (
-    <time
-      dateTime={d.getTime().toString()}
-      className={classnames(date, className)}
-      {...props}
-    >
-      {indexedMonths[d.getMonth()]}
-      {' '}
-      {d.getDate()}
+    <time dateTime={d.getTime().toString()} className={classnames(className)} {...props}>
+      {indexedMonths[d.getMonth()]} {d.getDate()}
       {', '}
       {d.getFullYear()}
     </time>

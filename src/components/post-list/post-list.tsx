@@ -1,8 +1,9 @@
-import * as React from 'react';
+import VisuallyHidden from '@reach/visually-hidden';
+import classnames from 'classnames';
 import { Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import classnames from 'classnames';
-import VisuallyHidden from '@reach/visually-hidden';
+import * as React from 'react';
+
 import Date from '../date';
 import DisplayFont from '../display-font';
 import Heading from '../heading';
@@ -11,28 +12,23 @@ import * as styles from './post-list.module.css';
 
 export type PostType = {
   frontmatter: {
-    title: string,
-    date: string,
-    cover: any,
-    description: string,
-    tags?: string[],
-  },
-  id: string,
-  slug: string,
+    title: string;
+    date: string;
+    cover: any;
+    description: string;
+    tags?: string[];
+  };
+  id: string;
+  slug: string;
 };
 
 export type PostListType = {
-  className?: string,
-  headingLevel?: React.ElementType,
-  posts: PostType[],
+  className?: string;
+  headingLevel?: React.ElementType;
+  posts: PostType[];
 };
 
-const PostList = ({
-  className,
-  posts,
-  headingLevel = 'h3',
-  ...props
-}: PostListType) => (
+const PostList = ({ className, posts, headingLevel = 'h3', ...props }: PostListType) => (
   <ul className={classnames(styles.list, className)} {...props}>
     {posts.map(({ frontmatter, id, slug }) => {
       const postUrl = `/${slug}`;
@@ -42,7 +38,9 @@ const PostList = ({
           <article>
             <header className={styles.header}>
               <Heading as={headingLevel} size="lg" className={styles.title}>
-                <Link to={postUrl} className={styles.titleLink}>{frontmatter.title}</Link>
+                <Link to={postUrl} className={styles.titleLink}>
+                  {frontmatter.title}
+                </Link>
               </Heading>
               <Date dateString={frontmatter.date} className={styles.date} />
 

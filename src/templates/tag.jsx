@@ -1,8 +1,9 @@
-import * as React from 'react';
 import { graphql } from 'gatsby';
+import * as React from 'react';
+
 import Layout from '../components/layout';
-import SectionTitle from '../components/section-title';
 import PostList from '../components/post-list';
+import SectionTitle from '../components/section-title';
 import Seo from '../components/seo';
 
 const PostsPage = ({ data, pageContext }) => {
@@ -10,9 +11,7 @@ const PostsPage = ({ data, pageContext }) => {
     <Layout>
       <Seo
         title={`Posts tagged as ${pageContext.tag}`}
-        description={
-          `Featuring the blog posts about ${pageContext.tag}, web application development, programmatic audio, and more.`
-        }
+        description={`Featuring the blog posts about ${pageContext.tag}, web application development, programmatic audio, and more.`}
       />
 
       <SectionTitle as="h1">Posts Tagged: {pageContext.tag}</SectionTitle>
@@ -26,7 +25,7 @@ export default PostsPage;
 export const query = graphql`
   query ($tag: String) {
     allMdx(
-      filter: { frontmatter: { tags: {in: [$tag]}}}
+      filter: { frontmatter: { tags: { in: [$tag] } } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       nodes {

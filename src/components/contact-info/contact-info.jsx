@@ -1,11 +1,14 @@
-import * as React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import classnames from 'classnames';
+import { graphql, useStaticQuery } from 'gatsby';
+import * as React from 'react';
+
 import DisplayFont from '../display-font';
 import * as styles from './contact-info.module.css';
 
 const ContactInfo = ({ className, ...props }) => {
-  const { site: { siteMetadata: metadata }} = useStaticQuery(graphql`
+  const {
+    site: { siteMetadata: metadata },
+  } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
@@ -18,22 +21,16 @@ const ContactInfo = ({ className, ...props }) => {
       }
     }
   `);
-  
+
   const contactLinks = metadata.social.filter(({ name }) => ['email', 'twitter'].includes(name));
   return (
     <ul className={classnames(styles.wrapper, className)} {...props}>
       {contactLinks.map(({ name, contact, link }) => (
         <li className={styles.item} key={name}>
-          <DisplayFont
-            as="span"
-            className={styles.title}
-          >
+          <DisplayFont as="span" className={styles.title}>
             {name}:
-          </DisplayFont>
-          {' '}
-          <a href={link}>
-            {contact}
-          </a>
+          </DisplayFont>{' '}
+          <a href={link}>{contact}</a>
         </li>
       ))}
     </ul>

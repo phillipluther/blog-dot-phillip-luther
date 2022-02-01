@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     url: 'https://blog.phillipluther.com',
-    name: 'Frontend and Audio Engineering: Phillip Luther\'s Blog',
+    name: "Frontend and Audio Engineering: Phillip Luther's Blog",
     description: 'Audio and Software Engineering on the Web',
     author: 'Phillip Luther',
     social: [
@@ -66,7 +66,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Frontend & Audio Engineering: Phillip Luther\'s Blog',
+        name: "Frontend & Audio Engineering: Phillip Luther's Blog",
         short_name: 'blog.phillipluther.com',
         start_url: '/',
         background_color: '#fff',

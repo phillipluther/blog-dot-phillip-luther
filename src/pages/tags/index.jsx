@@ -1,8 +1,9 @@
-import * as React from 'react';
 import { Link, graphql } from 'gatsby';
+import * as React from 'react';
 import slugify from 'slugify';
-import Seo from '../../components/seo';
+
 import Layout from '../../components/layout';
+import Seo from '../../components/seo';
 
 const TagsPage = ({ data }) => {
   const { siteName } = data.site.siteMetadata;
@@ -20,11 +21,7 @@ const TagsPage = ({ data }) => {
       <ul>
         {data.allMdx.group.map(({ totalCount, tag }) => (
           <li key={tag}>
-            <Link
-              to={`/tags/${slugify(tag)}`}
-            >
-              {tag}
-            </Link>
+            <Link to={`/tags/${slugify(tag)}`}>{tag}</Link>
           </li>
         ))}
       </ul>

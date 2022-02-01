@@ -1,12 +1,13 @@
-import * as React from 'react';
 import classnames from 'classnames';
+import * as React from 'react';
+
 import * as styles from './display-font.module.css';
 
 export type DisplayFontType = {
-  as?: React.ElementType,
-  children: React.ReactNode,
-  className?: string,
-  bold?: boolean,
+  as?: React.ElementType;
+  children: React.ReactNode;
+  className?: string;
+  bold?: boolean;
 };
 
 const DisplayFont = ({
@@ -17,9 +18,13 @@ const DisplayFont = ({
   ...props
 }: DisplayFontType) => (
   <Tag
-    className={classnames(styles.base, {
-      [styles.bold]: bold === true,
-    }, className)}
+    className={classnames(
+      styles.base,
+      {
+        [styles.bold]: bold === true,
+      },
+      className,
+    )}
     {...props}
   >
     {children}

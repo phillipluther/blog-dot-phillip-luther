@@ -12,7 +12,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           fieldValue
         }
       }
-    }  
+    }
   `);
 
   if (tagsResult.errors) {

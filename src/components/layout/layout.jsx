@@ -1,18 +1,18 @@
-import * as React from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
-import classnames from 'classnames';
 import VisuallyHidden from '@reach/visually-hidden';
+import classnames from 'classnames';
+import { Link, graphql, useStaticQuery } from 'gatsby';
+import * as React from 'react';
+
+import Logo from '../../images/blog-phillip-luther-logo.inline.svg';
+import Container from '../container';
 import PrimaryNav from '../primary-nav';
 import Social from '../social';
-import Container from '../container';
-import Logo from '../../images/blog-phillip-luther-logo.inline.svg';
 
-const Layout = ({
-  children,
-  isHome = false
-}) => {
+const Layout = ({ children, isHome = false }) => {
   const TitleTag = isHome ? 'h1' : 'p';
-  const { site: { siteMetadata: metadata }} = useStaticQuery(graphql`
+  const {
+    site: { siteMetadata: metadata },
+  } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
@@ -26,37 +26,37 @@ const Layout = ({
 
   return (
     <>
-      <Container as="header" className={}>
-        <TitleTag className={}>
-          <Link to="/" className={}>
-            <Logo className={} aria-hidden="true" alt="" />
+      <Container as="header">
+        <TitleTag>
+          <Link to="/">
+            <Logo aria-hidden="true" alt="" />
             <VisuallyHidden>{metadata.name}</VisuallyHidden>
           </Link>
         </TitleTag>
 
-        <PrimaryNav className={} />
-        <Social className={} />
+        <PrimaryNav />
+        <Social />
       </Container>
 
-      <Container as="main">
-        {children}
-      </Container>
+      <Container as="main">{children}</Container>
 
       <footer id="footer">
         <VisuallyHidden as="h2">Page Footer</VisuallyHidden>
 
-        <Container as="div" className={}>
-          <section className={}>
+        <Container as="div">
+          <section>
             <VisuallyHidden as="h3">Footer Navigation</VisuallyHidden>
 
-            <PrimaryNav className={} />
-            <Social className={} />
+            <PrimaryNav />
+            <Social />
           </section>
 
-          <section className={}>
+          <section>
             <VisuallyHidden as="h3">Copyright Info and Disclaimers</VisuallyHidden>
             <p>
-              The opinions and viewpoints expressed in any format on this site belong to me, Phillip Luther, and do not necessarily reflect the views or opinions of any associated organizations or corporate entities.
+              The opinions and viewpoints expressed in any format on this site belong to me, Phillip
+              Luther, and do not necessarily reflect the views or opinions of any associated
+              organizations or corporate entities.
             </p>
             <p>
               All content is Copyright &copy; 2022 by Phillip Luther unless otherwise specified.
