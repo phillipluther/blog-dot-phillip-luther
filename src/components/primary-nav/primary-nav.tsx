@@ -23,22 +23,24 @@ export const primaryNavLinks = [
 
 const PrimaryNav = ({
   className,
-  home = true,
+  showHome = true,
   ...props
 }: {
   className?: string;
-  home?: boolean;
+  showHome?: boolean;
 }) => (
-  <nav className={classnames(className)} {...props}>
-    <ul>
+  <nav className={className} {...props}>
+    <ul className="flex -ml-2 font-display text-lg">
       {primaryNavLinks.map(({ href, label }) => {
-        if (home === false && href === '/') {
+        if (showHome === false && href === '/') {
           return null;
         }
 
         return (
           <li key={href}>
-            <Link to={href}>{label}</Link>
+            <Link to={href} className="flex items-center h-12 px-2 lg:px-3">
+              {label}
+            </Link>
           </li>
         );
       })}

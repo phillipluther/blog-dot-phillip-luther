@@ -4,26 +4,16 @@ import * as React from 'react';
 const Container = ({
   className,
   children,
-  noX = false,
-  noY = false,
-  noTop = false,
-  noBottom = false,
-  noRight = false,
-  noLeft = false,
-  large = false,
   as: Tag = 'div',
   ...props
 }: {
   className?: string;
   children: React.ReactNode;
-  noX?: boolean;
-  noY?: boolean;
-  noTop?: boolean;
-  noBottom?: boolean;
-  noRight?: boolean;
-  noLeft?: boolean;
-  large?: boolean;
   as?: React.ElementType;
-}) => <Tag {...props}>{children}</Tag>;
+}) => (
+  <Tag className={classnames('max-w-screen-xl', 'mx-auto', 'p-4', 'sm:p-6', className)} {...props}>
+    {children}
+  </Tag>
+);
 
 export default Container;
