@@ -17,7 +17,7 @@ const Social = ({ className, ...props }: { className?: string }) => {
   const { site } = useStaticQuery(query);
 
   return (
-    <ul className={classnames(className)} {...props}>
+    <ul className={classnames('flex', '-ml-2', 'lg:-ml-3', 'text-3xl', className)} {...props}>
       {site.siteMetadata.social.map(
         ({ link, label, name }: { link: string; label: string; name: string }) => {
           const Icon = iconMap[name];
@@ -25,7 +25,7 @@ const Social = ({ className, ...props }: { className?: string }) => {
 
           return (
             <li key={name}>
-              <a href={link}>
+              <a href={link} className="flex items-center h-12 px-2 lg:px-3">
                 {Icon && <Icon aria-hidden="true" />}
                 <Label>{label}</Label>
               </a>

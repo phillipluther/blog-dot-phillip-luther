@@ -30,7 +30,7 @@ const PrimaryNav = ({
   showHome?: boolean;
 }) => (
   <nav className={className} {...props}>
-    <ul className="flex -ml-2 font-display text-lg">
+    <ul className="flex -ml-2 lg:-ml-3 font-display text-lg">
       {primaryNavLinks.map(({ href, label }) => {
         if (showHome === false && href === '/') {
           return null;
