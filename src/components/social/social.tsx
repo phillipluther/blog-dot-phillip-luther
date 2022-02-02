@@ -25,7 +25,7 @@ const Social = ({ className, ...props }: { className?: string }) => {
 
           return (
             <li key={name}>
-              <a href={link} className="flex items-center h-12 px-2 lg:px-3">
+              <a href={link} className="flex items-center h-12 px-2 md:px-3">
                 {Icon && <Icon aria-hidden="true" />}
                 <Label>{label}</Label>
               </a>

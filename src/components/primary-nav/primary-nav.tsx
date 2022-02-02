@@ -38,7 +38,7 @@ const PrimaryNav = ({
 
         return (
           <li key={href}>
-            <Link to={href} className="flex items-center h-12 px-2 lg:px-3">
+            <Link to={href} className="flex items-center h-12 px-2 md:px-3">
               {label}
             </Link>
           </li>
