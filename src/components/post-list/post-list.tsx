@@ -5,10 +5,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 
 import Date from '../date';
-import DisplayFont from '../display-font';
-import Heading from '../heading';
 import TagList from '../tag-list';
-import * as styles from './post-list.module.css';
 
 export type PostType = {
   frontmatter: {
@@ -22,27 +19,31 @@ export type PostType = {
   slug: string;
 };
 
-export type PostListType = {
+const PostList = ({
+  className,
+  posts,
+  headingLevel: Heading = 'h3',
+  ...props
+}: {
   className?: string;
   headingLevel?: React.ElementType;
   posts: PostType[];
-};
-
-const PostList = ({ className, posts, headingLevel = 'h3', ...props }: PostListType) => (
-  <ul className={classnames(styles.list, className)} {...props}>
+}) => (
+  <ul className={classnames('flex', 'flex-wrap', 'sm:space-x-4', className)} {...props}>
     {posts.map(({ frontmatter, id, slug }) => {
       const postUrl = `/${slug}`;
 
       return (
-        <li className={styles.item} key={id}>
+        <li key={id} className="">
           <article>
-            <header className={styles.header}>
-              <Heading as={headingLevel} size="lg" className={styles.title}>
-                <Link to={postUrl} className={styles.titleLink}>
-                  {frontmatter.title}
-                </Link>
+            <header className="flex flex-wrap">
+              <Heading className="w-full font-display text-gray-700 text-2xl mb-4 order-2">
+                <Link to={postUrl}>{frontmatter.title}</Link>
               </Heading>
-              <Date dateString={frontmatter.date} className={styles.date} />
+              <Date
+                dateString={frontmatter.date}
+                className="block w-full mb-4 text-sm text-gray-500 order-3"
+              />
 
               {frontmatter.cover && (
                 <Link to={postUrl} tabIndex={-1}>
@@ -51,7 +52,7 @@ const PostList = ({ className, posts, headingLevel = 'h3', ...props }: PostListT
                     image={getImage(frontmatter.cover)}
                     alt=""
                     aria-hidden
-                    className={styles.cover}
+                    className="w-full order-1 mb-4"
                   />
                 </Link>
               )}

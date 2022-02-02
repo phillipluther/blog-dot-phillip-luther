@@ -20,7 +20,7 @@ const DateX = ({ className, dateString, ...props }: { className?: string; dateSt
   const d = new Date(dateString);
 
   return (
-    <time dateTime={d.getTime().toString()} className={classnames(className)} {...props}>
+    <time dateTime={d.getTime().toString()} className={className} {...props}>
       {indexedMonths[d.getMonth()]} {d.getDate()}
       {', '}
       {d.getFullYear()}
