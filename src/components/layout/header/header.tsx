@@ -36,7 +36,7 @@ const Header = ({
     >
       <TitleTag className="mr-4">
         <Link to="/">
-          <Logo aria-hidden="true" alt="" className="h-auto w-36 sm:w-44 lg:w-48" />
+          <Logo aria-hidden="true" alt="" className="h-auto w-36 sm:w-40 lg:w-44" />
           <VisuallyHidden>{metadata.name}</VisuallyHidden>
         </Link>
       </TitleTag>

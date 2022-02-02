@@ -7,6 +7,10 @@ module.exports = {
       fontFamily: {
         display: 'Anton, sans-serif',
       },
+      fontSize: {
+        'body-md': '1.1em',
+        'body-lg': '1.2em',
+      },
     },
   },
   plugins: [

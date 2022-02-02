@@ -14,7 +14,7 @@ const Footer = ({ className, ...props }: { className?: string }) => (
       <section className="flex flex-wrap place-content-between md:place-content-start">
         <VisuallyHidden as="h3">Footer Navigation</VisuallyHidden>
 
-        <PrimaryNav className="my-2 sm:my-3 mr-8 md:w-1/3" />
+        <PrimaryNav className="my-2 sm:my-3 mr-8 lg:w-1/3" />
         <Social className="my-2 sm:my-3 md:w-1/3" />
       </section>
 
