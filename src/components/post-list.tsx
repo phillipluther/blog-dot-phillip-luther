@@ -36,7 +36,7 @@ const PostList = ({
       return (
         <li
           key={id}
-          className="pt-4 mt-4 first:mt-0 first:pt-0 relative sm:mb-6 sm:py-3 sm:first:pt-3 sm:pl-48 md:w-1/2 md:pt-0 md:mt-0 md:first:pt-0 md:px-6 lg:w-1/3"
+          className="pt-4 mt-4 first:mt-0 first:pt-0 relative sm:mb-6 sm:py-3 sm:first:pt-3 sm:pl-48 md:w-1/2 md:pt-0 md:mt-0 md:first:pt-0 md:px-6"
         >
           <article className="sm:ml-6 md:ml-0">
             <header className="flex flex-wrap">
@@ -63,7 +63,7 @@ const PostList = ({
 
             <p>{frontmatter.description}</p>
 
-            <footer>
+            <footer className="mt-4 md:mt-6">
               {frontmatter.tags && (
                 <section aria-label="Related Topics">
                   <TagList tags={frontmatter.tags} />

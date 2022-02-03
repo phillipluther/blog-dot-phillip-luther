@@ -7,7 +7,7 @@ import * as React from 'react';
 import AuthorCard from '../components/author-card';
 import Banner from '../components/banner';
 import Container from '../components/container';
-import Layout from '../components/layout';
+import { Header, Footer } from '../components/layout';
 import Seo from '../components/seo';
 import TagList from '../components/tag-list';
 
@@ -26,7 +26,8 @@ const BlogPost = ({ data }) => {
   const image = getImage(cover);
 
   return (
-    <Layout>
+    <>
+      <Header />
       <Seo
         title={title}
         description={description}
@@ -64,7 +65,8 @@ const BlogPost = ({ data }) => {
           <AuthorCard as="section" />
         </footer>
       </article>
-    </Layout>
+      <Footer />
+    </>
   );
 };
 

@@ -2,7 +2,7 @@ import VisuallyHidden from '@reach/visually-hidden';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import * as React from 'react';
 
-import Logo from '../../images/blog-phillip-luther-logo-reverse.inline.svg';
+import Logo from '../../images/blog-phillip-luther-logo.inline.svg';
 import Container from '../container';
 import PrimaryNav from '../primary-nav';
 
@@ -32,10 +32,11 @@ const Header = ({
   return (
     <Container
       as="header"
-      className="bg-gray-800 text-gray-200 flex flex-wrap place-content-between items-center"
+      padY={false}
+      className="text-gray-800 flex flex-wrap place-content-between items-center py-4"
     >
       <TitleTag className="mr-4">
-        <Link to="/">
+        <Link to="/" className="outline-inherit outline-offset-4">
           <Logo aria-hidden="true" alt="" className="h-auto w-36" />
           <VisuallyHidden>{metadata.name}</VisuallyHidden>
         </Link>

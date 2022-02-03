@@ -4,7 +4,7 @@ import * as React from 'react';
 import slugify from 'slugify';
 
 const TagList = ({ tags, className, ...props }: { tags: string[]; className?: string }) => (
-  <ul className={classnames('flex', 'flex-wrap', 'mt-4', 'md:mt-6', className)} {...props}>
+  <ul className={classnames('flex', 'flex-wrap', className)} {...props}>
     {tags.map((tagName) => (
       <li key={tagName}>
         <Link

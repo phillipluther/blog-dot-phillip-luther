@@ -1,4 +1,3 @@
-import VisuallyHidden from '@reach/visually-hidden';
 import { graphql } from 'gatsby';
 import * as React from 'react';
 

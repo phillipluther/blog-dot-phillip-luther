@@ -7,7 +7,7 @@ import PrimaryNav from '../primary-nav';
 import Social from '../social';
 
 const Footer = ({ className, ...props }: { className?: string }) => (
-  <footer className={classnames('bg-gray-800', 'text-gray-200', className)} {...props}>
+  <footer className={classnames('bg-gray-900', 'text-gray-200', className)} {...props}>
     <VisuallyHidden as="h2">Page Footer</VisuallyHidden>
 
     <Container as="div">

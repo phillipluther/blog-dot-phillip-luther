@@ -2,9 +2,11 @@ import classnames from 'classnames';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 
+import Container from './container';
 import Date from './date';
 
 const Banner = ({
+  as = 'header',
   className,
   headingLevel: Heading = 'h1',
   image,
@@ -13,6 +15,7 @@ const Banner = ({
   summary,
   ...props
 }: {
+  as?: React.ElementType;
   className?: string;
   headingLevel?: React.ElementType;
   headline: string;
@@ -25,15 +28,30 @@ const Banner = ({
     creditLink?: string;
   };
 }) => (
-  <header className={classnames(className)} {...props}>
-    <figure aria-hidden>
-      <GatsbyImage image={image.src} alt={image.alt} />
+  <Container as={as} padY={false}>
+    <Heading className="relative py-4 my-4 sm:py-6 sm:my-6 font-display text-5xl leading-tight sm:text-7xl sm:leading-extra-tight md:text-8xl md:leading-extra-tight before:block before:w-1/5 before:border-t-2 before:border-gray-300 before:absolute before:top-0 before:left-0 after:block after:w-1/5 after:border-t-2 after:border-gray-300 after:absolute after:bottom-0 after:left-0">
+      {headline}
+    </Heading>
+    {date && (
+      <p className="mb-4 sm:mb-5">
+        <Date dateString={date} />
+      </p>
+    )}
+    {summary && (
+      <p className="text-lg md:text-xl mb-4 sm:mb-6 before:content-['tl;dr'] before:block before:text-gray-600 before:italic before:text-sm before:mb-1">
+        {summary}
+      </p>
+    )}
+
+    <figure className="relative mb-4 sm:mb-6" aria-hidden>
+      <GatsbyImage image={image.src} alt={image.alt} className="md:aspect-video -z-10" />
+
       {(image.credit || image.creditLink) && (
         <figcaption>
-          <cite>
+          <cite className="absolute bottom-0 right-0 text-sm bg-gray-900 text-gray-400 px-2">
             Photo Credit:{' '}
             {image.creditLink ? (
-              <a tabIndex={-1} href={image.creditLink}>
+              <a tabIndex={-1} href={image.creditLink} className="text-emerald-300">
                 {image.credit || image.creditLink}
               </a>
             ) : (
@@ -43,17 +61,7 @@ const Banner = ({
         </figcaption>
       )}
     </figure>
-
-    <div>
-      <Heading>{headline}</Heading>
-      {date && (
-        <p>
-          <Date dateString={date} />
-        </p>
-      )}
-      {summary && <p>{summary}</p>}
-    </div>
-  </header>
+  </Container>
 );
 
 export default Banner;
