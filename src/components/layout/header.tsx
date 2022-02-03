@@ -2,9 +2,9 @@ import VisuallyHidden from '@reach/visually-hidden';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import * as React from 'react';
 
-import Logo from '../../../images/blog-phillip-luther-logo-reverse.inline.svg';
-import Container from '../../container';
-import PrimaryNav from '../../primary-nav';
+import Logo from '../../images/blog-phillip-luther-logo-reverse.inline.svg';
+import Container from '../container';
+import PrimaryNav from '../primary-nav';
 
 const Header = ({
   className,

@@ -2,26 +2,21 @@ import classnames from 'classnames';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 
-import Container from '../container';
-import Heading from '../heading';
-import Social from '../social';
-import * as styles from './author-card.module.css';
+import Container from './container';
+import Social from './social';
 
 export type AuthorCardTypes = {
   className?: string;
 };
 
 const AuthorCard = ({ className, ...props }: AuthorCardTypes) => (
-  <Container className={classnames(styles.wrapper, className)} {...props}>
-    <Heading as="h2" size="xs">
-      About the Author
-    </Heading>
+  <Container className={classnames(className)} {...props}>
+    <h2>About the Author</h2>
 
     <StaticImage
       src="./portrait-avatar.png"
       alt="Phillip Luther, the blog's author"
       placeholder="blurred"
-      className={styles.image}
     />
     <p>My name is Phillip Luther. I go by Phil.</p>
     <p>
@@ -34,14 +29,12 @@ const AuthorCard = ({ className, ...props }: AuthorCardTypes) => (
       channels. Ask me about 'em!
     </p>
 
-    <div className={styles.connect}>
-      <Heading size="xs" as="h3" className={styles.subhead} bold={false}>
-        Connect With Me:
-      </Heading>
+    <div>
+      <h3>Connect With Me:</h3>
       <Social />
     </div>
 
-    <p className={styles.small} id="life_long_clarification">
+    <p id="life_long_clarification">
       <span>*</span>
       <span>
         I'm just over 40. Accounting for childhood and teenage buffoonery I'll translate "life long"

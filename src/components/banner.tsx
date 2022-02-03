@@ -2,12 +2,11 @@ import classnames from 'classnames';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 
-import Date from '../date';
-import Heading from '../heading';
+import Date from './date';
 
 const Banner = ({
   className,
-  headingLevel = 'h1',
+  headingLevel: Heading = 'h1',
   image,
   headline,
   date,
@@ -46,9 +45,7 @@ const Banner = ({
     </figure>
 
     <div>
-      <Heading as={headingLevel} size="xl" flush>
-        {headline}
-      </Heading>
+      <Heading>{headline}</Heading>
       {date && (
         <p>
           <Date dateString={date} />

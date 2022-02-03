@@ -2,8 +2,6 @@ import VisuallyHidden from '@reach/visually-hidden';
 import { graphql } from 'gatsby';
 import * as React from 'react';
 
-import ContactInfo from '../components/contact-info';
-import Heading from '../components/heading';
 import Layout from '../components/layout';
 import SectionTitle from '../components/section-title';
 import Seo from '../components/seo';
@@ -27,10 +25,7 @@ const ContactPage = ({ data }) => {
 
       <SectionTitle as="h1">Contact Info</SectionTitle>
 
-      <VisuallyHidden as="h2">Contact Methods</VisuallyHidden>
-      <ContactInfo />
-
-      <Heading as="h2">Get In Touch!</Heading>
+      <h2>Get In Touch!</h2>
       <p>
         Questions, comments, ideas, or feedback for the blog? Found something wonky with the site
         itself? Hate the fonts?

@@ -30,7 +30,7 @@ const PrimaryNav = ({
   showHome?: boolean;
 }) => (
   <nav className={className} {...props}>
-    <ul className="flex -ml-2 lg:-ml-3 font-display text-lg">
+    <ul className="flex -ml-2 lg:-ml-3 font-display">
       {primaryNavLinks.map(({ href, label }) => {
         if (showHome === false && href === '/') {
           return null;
@@ -38,7 +38,10 @@ const PrimaryNav = ({
 
         return (
           <li key={href}>
-            <Link to={href} className="flex items-center h-12 px-2 md:px-3">
+            <Link
+              to={href}
+              className="flex items-center h-12 px-2 md:px-3 text-gray-200 hover:text-emerald-200 hover:underline decoration-2 outline-inherit"
+            >
               {label}
             </Link>
           </li>

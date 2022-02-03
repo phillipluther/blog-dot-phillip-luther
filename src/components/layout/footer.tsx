@@ -2,9 +2,9 @@ import VisuallyHidden from '@reach/visually-hidden';
 import classnames from 'classnames';
 import * as React from 'react';
 
-import Container from '../../container';
-import PrimaryNav from '../../primary-nav';
-import Social from '../../social';
+import Container from '../container';
+import PrimaryNav from '../primary-nav';
+import Social from '../social';
 
 const Footer = ({ className, ...props }: { className?: string }) => (
   <footer className={classnames('bg-gray-800', 'text-gray-200', className)} {...props}>
