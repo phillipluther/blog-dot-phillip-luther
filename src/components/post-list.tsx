@@ -55,7 +55,7 @@ const PostList = ({
                     image={getImage(frontmatter.cover)}
                     alt=""
                     aria-hidden
-                    className="w-full h-56 order-1 mb-4 sm:absolute sm:top-0 sm:left-0 sm:w-48 sm:h-full md:relative md:w-full md:h-56"
+                    className="w-full h-56 order-1 mb-4 sm:absolute sm:top-0 sm:left-0 sm:w-48 sm:h-full md:relative md:w-full md:h-56 shadow"
                   />
                 </Link>
               )}
