@@ -36,7 +36,7 @@ const Header = ({
       className="text-gray-800 flex flex-wrap place-content-between items-center py-4"
     >
       <TitleTag className="mr-4">
-        <Link to="/" className="outline-inherit outline-offset-4">
+        <Link to="/" className="outline-offset-4">
           <Logo aria-hidden="true" alt="" className="h-auto w-36" />
           <VisuallyHidden>{metadata.name}</VisuallyHidden>
         </Link>

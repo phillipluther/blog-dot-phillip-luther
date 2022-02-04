@@ -41,7 +41,7 @@ const AuthorCard = ({
       </div>
 
       <div className="flex items-center my-4 sm:my-6">
-        <h3 className="font-display text-gray-500 mr-4">Connect With Me:</h3>
+        <h3 className="font-display text-gray-500 mr-4 sm:mr-6">Connect With Me:</h3>
         <Social />
       </div>
 

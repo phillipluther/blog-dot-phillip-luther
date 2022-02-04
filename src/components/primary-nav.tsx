@@ -40,7 +40,7 @@ const PrimaryNav = ({
           <li key={href}>
             <Link
               to={href}
-              className="flex items-center h-12 px-2 md:px-3 hover:underline decoration-2 outline-inherit"
+              className="flex items-center h-12 px-2 md:px-3 hover:underline decoration-2"
             >
               {label}
             </Link>

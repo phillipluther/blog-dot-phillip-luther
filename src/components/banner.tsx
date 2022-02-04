@@ -38,7 +38,7 @@ const Banner = ({
       </p>
     )}
     {summary && (
-      <p className="text-lg md:text-xl mb-4 sm:mb-6 before:content-['tl;dr'] before:block before:text-gray-600 before:italic before:text-sm before:mb-1">
+      <p className="text-lg md:text-xl mb-4 sm:mb-6 before:content-['tl;dr'] before:block before:text-gray-500 before:italic before:text-sm before:mb-1">
         {summary}
       </p>
     )}

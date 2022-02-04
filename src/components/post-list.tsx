@@ -40,7 +40,7 @@ const PostList = ({
         >
           <article className="sm:ml-6 md:ml-0">
             <header className="flex flex-wrap">
-              <Heading className="w-full font-display text-gray-700 text-2xl mb-4 order-2">
+              <Heading className="w-full font-display text-2xl mb-4 order-2">
                 <Link to={postUrl}>{frontmatter.title}</Link>
               </Heading>
               <Date

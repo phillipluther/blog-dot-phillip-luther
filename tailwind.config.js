@@ -3,6 +3,7 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
+    color: '#ff0000',
     extend: {
       fontFamily: {
         display: 'Anton, sans-serif',
@@ -13,10 +14,17 @@ module.exports = {
       lineHeight: {
         'extra-tight': '1.15',
       },
-      typography: {
+      typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: 'inherit',
+            a: {
+              color: theme('colors.emerald.600'),
+              textDecoration: 'underline',
+              '&:hover': {
+                color: theme('colors.emerald.800'),
+                textDecoration: 'none',
+              },
+            },
             h1: {
               fontWeight: 'inherit',
             },
@@ -37,7 +45,7 @@ module.exports = {
             },
           },
         },
-      },
+      }),
     },
   },
   plugins: [
