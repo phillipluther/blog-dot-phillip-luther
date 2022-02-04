@@ -7,11 +7,29 @@ import * as React from 'react';
 import AuthorCard from '../components/author-card';
 import Banner from '../components/banner';
 import Container from '../components/container';
-import { Header, Footer } from '../components/layout';
+import { Footer, Header } from '../components/layout';
+import SectionTitle from '../components/section-title';
 import Seo from '../components/seo';
 import TagList from '../components/tag-list';
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({
+  data,
+}: {
+  data: {
+    mdx: {
+      frontmatter: {
+        title: string;
+        description: string;
+        cover: any; // TODO: ack!
+        cover_alt: string;
+        cover_credit: string;
+        cover_credit_link: string;
+        tags: string[];
+        date: string;
+      };
+    };
+  };
+}) => {
   const {
     title,
     description,
@@ -50,21 +68,22 @@ const BlogPost = ({ data }) => {
           }}
         />
 
-        <Container noX>
+        <Container className="prose md:text-lg">
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
         </Container>
 
-        <footer>
+        <Container as="footer" className="mb-4 sm:mb-6">
           <VisuallyHidden as="h2">Supplemental Content</VisuallyHidden>
 
-          <section>
-            <h3>More Like This</h3>
+          <section className="mb-8 sm:mb-12">
+            <SectionTitle as="h3">More Like This</SectionTitle>
             <TagList tags={tags} />
           </section>
 
-          <AuthorCard as="section" />
-        </footer>
+          <AuthorCard as="section" headingLevel="h3" />
+        </Container>
       </article>
+
       <Footer />
     </>
   );

@@ -11,6 +11,14 @@ const Seo = ({
   keywords,
   children,
   showAuthor = true,
+}: {
+  title: string;
+  description: string;
+  image?: string;
+  article?: boolean;
+  keywords?: string[];
+  children?: React.ReactElement;
+  showAuthor?: boolean;
 }) => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
