@@ -29,18 +29,18 @@ const PostList = ({
   headingLevel?: React.ElementType;
   posts: PostType[];
 }) => (
-  <ul className={classnames('flex', 'flex-wrap', 'md:-ml-6', 'md:-mr-6', className)} {...props}>
+  <ul className={classnames(className)} {...props}>
     {posts.map(({ frontmatter, id, slug }) => {
       const postUrl = `/${slug}`;
 
       return (
         <li
           key={id}
-          className="pt-4 mt-4 first:mt-0 first:pt-0 relative sm:mb-6 sm:py-3 sm:first:pt-3 sm:pl-48 md:w-1/2 md:pt-0 md:mt-0 md:first:pt-0 md:px-6"
+          className="pt-4 mt-4 first:mt-0 first:pt-0 relative sm:mb-6 sm:py-3 sm:first:pt-3 sm:pl-48"
         >
-          <article className="sm:ml-6 md:ml-0">
+          <article className="sm:ml-6">
             <header className="flex flex-wrap">
-              <Heading className="w-full font-display text-2xl mb-4 order-2">
+              <Heading className="w-full font-display text-2xl mb-4 order-2 md:text-3xl">
                 <Link to={postUrl}>{frontmatter.title}</Link>
               </Heading>
               <Date
@@ -55,7 +55,7 @@ const PostList = ({
                     image={getImage(frontmatter.cover)}
                     alt=""
                     aria-hidden
-                    className="w-full h-56 order-1 mb-4 sm:absolute sm:top-0 sm:left-0 sm:w-48 sm:h-full md:relative md:w-full md:h-56 shadow"
+                    className="w-full h-56 order-1 mb-4 sm:absolute sm:top-0 sm:left-0 sm:w-48 sm:h-full shadow"
                   />
                 </Link>
               )}
@@ -64,6 +64,12 @@ const PostList = ({
             <p>{frontmatter.description}</p>
 
             <footer className="mt-4 md:mt-6">
+              <p className="mb-4 md:mb-6">
+                <Link to={postUrl} className="text-emerald-600 hover:text-emerald-800 font-bold">
+                  Read More &raquo;
+                  <VisuallyHidden>: {frontmatter.title}</VisuallyHidden>
+                </Link>
+              </p>
               {frontmatter.tags && (
                 <section aria-label="Related Topics">
                   <TagList tags={frontmatter.tags} />

@@ -68,7 +68,7 @@ const BlogPost = ({
           }}
         />
 
-        <Container className="prose md:text-lg">
+        <Container className="prose sm:prose-lg md:prose-xl">
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
         </Container>
 

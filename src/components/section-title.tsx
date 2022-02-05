@@ -1,13 +1,16 @@
 import classnames from 'classnames';
 import * as React from 'react';
 
-export type SectionTitleType = {
+const SectionTitle = ({
+  as: Tag = 'h1',
+  children,
+  className,
+  ...props
+}: {
   as?: React.ElementType;
   children: React.ReactNode;
   className?: string;
-};
-
-const SectionTitle = ({ as: Tag = 'h1', children, className, ...props }: SectionTitleType) => (
+}) => (
   <Tag
     className={classnames(
       'relative',
