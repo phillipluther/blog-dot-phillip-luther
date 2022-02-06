@@ -16,7 +16,7 @@ const SectionTitle = ({
       'relative',
       'font-display',
       'text-gray-500',
-      'text-base',
+      '!text-base',
       'block',
       'mb-4',
       'sm:mb-6',

@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@fontsource/anton": "^4.5.1",
-    "@fontsource/chivo": "^4.5.0",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@reach/dialog": "^0.16.2",
